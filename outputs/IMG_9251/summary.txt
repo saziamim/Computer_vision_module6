@@ -1,0 +1,21 @@
+Part A - Optical Flow Summary
+============================
+
+Input video: IMG_9251.mp4
+Original duration: 31.87 sec
+Processed duration: 30.00 sec
+FPS used: 29.99
+Frames processed: 899
+
+Minimum average motion magnitude: 1.6378
+Maximum average motion magnitude: 14.0945
+Mean average motion magnitude: 5.2689
+
+Interpretation:
+- Optical flow direction is represented by color in the HSV video.
+- Optical flow magnitude is represented by brightness in the HSV video.
+- In the arrow video, arrow direction shows motion direction.
+- Larger arrows / brighter regions indicate stronger motion.
+- Static regions usually have small or near-zero flow.
+- If most of the frame moves similarly, that often indicates camera motion.
+- If only a local region moves, that usually indicates object motion.

@@ -1,0 +1,97 @@
+Part B - Motion Tracking Validation
+==================================
+
+Optical Flow Constraint Equation:
+Ix * u + Iy * v + It = 0
+
+For each selected point, the code reports:
+- original location (x, y)
+- estimated flow (u, v)
+- predicted location (x+u, y+v)
+- frame1 intensity at (x, y)
+- frame2 intensity at predicted location using bilinear interpolation
+- value of Ix*u + Iy*v + It (should be close to 0)
+
+Point 1
+-------
+Original pixel location: (398, 600)
+Estimated flow (u, v): (-0.1257, 1.3485)
+Predicted location: (397.8743, 601.3485)
+I1(x,y): 201.0000
+I2(predicted location, bilinear): 203.9862
+Intensity difference I2-I1: 2.9862
+Ix: 17.3750, Iy: 1.6250, It: -13.0000
+Ix*u + Iy*v + It = -12.992054
+Interpretation:
+- If Ix*u + Iy*v + It is close to 0, the theoretical optical flow equation is validated locally.
+- If I2 at predicted location is close to I1, brightness constancy is approximately satisfied.
+
+Point 2
+-------
+Original pixel location: (327, 433)
+Estimated flow (u, v): (-0.9926, 1.6046)
+Predicted location: (326.0074, 434.6046)
+I1(x,y): 82.0000
+I2(predicted location, bilinear): 88.7638
+Intensity difference I2-I1: 6.7638
+Ix: -22.5000, Iy: 22.2500, It: -20.0000
+Ix*u + Iy*v + It = 38.034584
+Interpretation:
+- If Ix*u + Iy*v + It is close to 0, the theoretical optical flow equation is validated locally.
+- If I2 at predicted location is close to I1, brightness constancy is approximately satisfied.
+
+Point 3
+-------
+Original pixel location: (516, 785)
+Estimated flow (u, v): (0.1638, -0.1591)
+Predicted location: (516.1638, 784.8409)
+I1(x,y): 159.0000
+I2(predicted location, bilinear): 140.8758
+Intensity difference I2-I1: -18.1242
+Ix: 24.6250, Iy: -9.3750, It: -14.0000
+Ix*u + Iy*v + It = -8.474868
+Interpretation:
+- If Ix*u + Iy*v + It is close to 0, the theoretical optical flow equation is validated locally.
+- If I2 at predicted location is close to I1, brightness constancy is approximately satisfied.
+
+Point 4
+-------
+Original pixel location: (471, 501)
+Estimated flow (u, v): (-0.3559, 0.9647)
+Predicted location: (470.6441, 501.9647)
+I1(x,y): 146.0000
+I2(predicted location, bilinear): 126.7864
+Intensity difference I2-I1: -19.2136
+Ix: 11.8750, Iy: -9.8750, It: 4.0000
+Ix*u + Iy*v + It = -9.752516
+Interpretation:
+- If Ix*u + Iy*v + It is close to 0, the theoretical optical flow equation is validated locally.
+- If I2 at predicted location is close to I1, brightness constancy is approximately satisfied.
+
+Point 5
+-------
+Original pixel location: (577, 334)
+Estimated flow (u, v): (-0.1507, 2.4750)
+Predicted location: (576.8493, 336.4750)
+I1(x,y): 134.0000
+I2(predicted location, bilinear): 112.9530
+Intensity difference I2-I1: -21.0470
+Ix: 21.0000, Iy: -17.5000, It: -75.0000
+Ix*u + Iy*v + It = -121.477275
+Interpretation:
+- If Ix*u + Iy*v + It is close to 0, the theoretical optical flow equation is validated locally.
+- If I2 at predicted location is close to I1, brightness constancy is approximately satisfied.
+
+Point 6
+-------
+Original pixel location: (383, 553)
+Estimated flow (u, v): (0.0305, 1.4441)
+Predicted location: (383.0305, 554.4441)
+I1(x,y): 125.0000
+I2(predicted location, bilinear): 127.2239
+Intensity difference I2-I1: 2.2239
+Ix: -4.1250, Iy: 8.3750, It: -42.0000
+Ix*u + Iy*v + It = -30.031634
+Interpretation:
+- If Ix*u + Iy*v + It is close to 0, the theoretical optical flow equation is validated locally.
+- If I2 at predicted location is close to I1, brightness constancy is approximately satisfied.
