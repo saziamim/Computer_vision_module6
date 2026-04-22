@@ -1,0 +1,63 @@
+Part B: Planar Structure from Motion / Homography-based Reconstruction
+=====================================================================
+
+Input images:
+  1. img5.jpeg
+  2. img6.jpeg
+  3. img7.jpeg
+  4. img8.jpeg
+
+Method overview:
+- A planar object was captured from four viewpoints.
+- ORB features were detected in each image.
+- Feature matches were computed between the reference image and each other image.
+- A homography H was estimated using RANSAC.
+- The planar boundary from the reference image was projected into the other images.
+- Each image was warped back to the reference plane to approximate a common planar reconstruction.
+
+Mathematical model:
+For planar scenes, corresponding points satisfy:
+    x' = Hx
+where H is a 3x3 homography matrix.
+
+Boundary selection:
+- The full reference image boundary was used as a default.
+- For stronger assignment evidence, manually provide the true object corners.
+
+Reference boundary corners:
+  Corner 1: (0.00, 0.00)
+  Corner 2: (799.00, 0.00)
+  Corner 3: (799.00, 1065.00)
+  Corner 4: (0.00, 1065.00)
+
+Pair: reference -> image 2
+----------------------------------------
+Total good matches: 224
+RANSAC inliers: 182
+Homography matrix:
+[[   1.9411    0.1122 -173.4423]
+ [   0.2369    1.5356 -149.9597]
+ [   0.0007   -0.        1.    ]]
+
+Pair: reference -> image 3
+----------------------------------------
+Total good matches: 75
+RANSAC inliers: 59
+Homography matrix:
+[[   2.5681    0.3487 -152.4749]
+ [   0.2445    1.8799 -187.165 ]
+ [   0.0012   -0.0001    1.    ]]
+
+Pair: reference -> image 4
+----------------------------------------
+Total good matches: 373
+RANSAC inliers: 251
+Homography matrix:
+[[  1.1202   0.1031 -15.2335]
+ [ -0.002    1.0129  34.3022]
+ [  0.0002   0.       1.    ]]
+
+Interpretation:
+- If the projected boundary aligns with the planar object in each view, the planar mapping is validated.
+- If the warped images align well in the reference plane, this supports reconstruction of the planar surface.
+- Small errors are expected due to imperfect matches, camera noise, and perspective effects.

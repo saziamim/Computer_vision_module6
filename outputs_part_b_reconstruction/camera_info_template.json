@@ -1,0 +1,42 @@
+[
+  {
+    "image_id": 1,
+    "file": "img5.jpeg",
+    "camera_position_description": "View 1: describe where camera was placed",
+    "distance_from_object": "fill manually",
+    "tilt_angle": "fill manually",
+    "camera_device": "fill manually",
+    "focal_length_if_known": "fill manually",
+    "notes": "fill manually"
+  },
+  {
+    "image_id": 2,
+    "file": "img6.jpeg",
+    "camera_position_description": "View 2: describe where camera was placed",
+    "distance_from_object": "fill manually",
+    "tilt_angle": "fill manually",
+    "camera_device": "fill manually",
+    "focal_length_if_known": "fill manually",
+    "notes": "fill manually"
+  },
+  {
+    "image_id": 3,
+    "file": "img7.jpeg",
+    "camera_position_description": "View 3: describe where camera was placed",
+    "distance_from_object": "fill manually",
+    "tilt_angle": "fill manually",
+    "camera_device": "fill manually",
+    "focal_length_if_known": "fill manually",
+    "notes": "fill manually"
+  },
+  {
+    "image_id": 4,
+    "file": "img8.jpeg",
+    "camera_position_description": "View 4: describe where camera was placed",
+    "distance_from_object": "fill manually",
+    "tilt_angle": "fill manually",
+    "camera_device": "fill manually",
+    "focal_length_if_known": "fill manually",
+    "notes": "fill manually"
+  }
+]

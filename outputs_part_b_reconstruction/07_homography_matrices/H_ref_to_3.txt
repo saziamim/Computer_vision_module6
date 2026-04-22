@@ -1,0 +1,9 @@
+Homography matrix H:
+====================
+
+[[ 2.56809486e+00  3.48705710e-01 -1.52474875e+02]
+ [ 2.44479974e-01  1.87990273e+00 -1.87165043e+02]
+ [ 1.23064730e-03 -6.37289182e-05  1.00000000e+00]]
+
+This matrix maps points from the reference image to the current image:
+x' = Hx
